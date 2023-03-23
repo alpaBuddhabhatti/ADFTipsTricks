@@ -1,0 +1,9 @@
+{
+	"name": "ADF-TIPSTTRICKS",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c774f241-fd09-40b5-9aa5-0fdc6c30facc",
+		"tenantId": "ae9fbde4-bce1-462a-8664-5ac86fbfe439"
+	}
+}
