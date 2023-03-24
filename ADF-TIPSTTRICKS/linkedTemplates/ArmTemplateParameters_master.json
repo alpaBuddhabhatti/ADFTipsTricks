@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "ADF-TIPSTTRICKS"
 		},
+		"LS_ABLB_connectionString": {
+			"value": ""
+		},
 		"LS_REST_properties_typeProperties_url": {
 			"value": "https://hub.dummyapis.com/employee?noofRecords=10&idStarts=1001"
 		},

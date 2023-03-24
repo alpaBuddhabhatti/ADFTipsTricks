@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "ADF-TIPSTTRICKS"
 		},
+		"LS_ABLB_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_ABLB'"
+		},
 		"LS_REST_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://hub.dummyapis.com/employee?noofRecords=10&idStarts=1001"
@@ -37,6 +41,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"LS_ABLB_connectionString": {
+						"value": "[parameters('LS_ABLB_connectionString')]"
 					},
 					"LS_REST_properties_typeProperties_url": {
 						"value": "[parameters('LS_REST_properties_typeProperties_url')]"
