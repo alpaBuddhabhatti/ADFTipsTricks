@@ -1,5 +1,5 @@
 {
-	"name": "VAR_BLOB",
+	"name": "VAR_BLOB_API",
 	"properties": {
 		"description": "Writing  variable value to Blob Storage\n",
 		"activities": [

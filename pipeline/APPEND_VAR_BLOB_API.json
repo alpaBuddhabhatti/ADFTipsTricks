@@ -1,5 +1,5 @@
 {
-	"name": "APPEND_VAR_BLOB",
+	"name": "APPEND_VAR_BLOB_API",
 	"properties": {
 		"description": "Writing to Blob Storage\n-  Foreach loop can get values from metadata activity or lookup activity \n- Web activity can be outside foreach loop based on your requirement\n\n- In this Example, we just set static values \n",
 		"activities": [
