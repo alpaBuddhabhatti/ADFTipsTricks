@@ -1,0 +1,29 @@
+{
+	"name": "ANNOTATION_PL",
+	"properties": {
+		"description": "Annotation",
+		"activities": [
+			{
+				"name": "Wait1",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
+			}
+		],
+		"variables": {
+			"seconds": {
+				"type": "String",
+				"defaultValue": "10"
+			}
+		},
+		"folder": {
+			"name": "Annotation"
+		},
+		"annotations": [
+			"@variables('seconds')"
+		]
+	}
+}
