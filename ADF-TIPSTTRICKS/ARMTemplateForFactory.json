@@ -60,7 +60,8 @@
 					"name": "Annotation"
 				},
 				"annotations": [
-					"@add(int(pipeline().parameters.seconds),1)"
+					"@add(int(pipeline().parameters.seconds),1)",
+					"this is test1"
 				]
 			},
 			"dependsOn": []
