@@ -10,12 +10,18 @@
 				"userProperties": [],
 				"typeProperties": {
 					"waitTimeInSeconds": {
-						"value": "@int(variables('seconds'))",
+						"value": "@int(pipeline().parameters.seconds)",
 						"type": "Expression"
 					}
 				}
 			}
 		],
+		"parameters": {
+			"seconds": {
+				"type": "string",
+				"defaultValue": "10"
+			}
+		},
 		"variables": {
 			"seconds": {
 				"type": "String",
@@ -26,7 +32,7 @@
 			"name": "Annotation"
 		},
 		"annotations": [
-			"@int(variables('seconds'))"
+			"@int(pipeline().parameters.seconds)"
 		]
 	}
 }
