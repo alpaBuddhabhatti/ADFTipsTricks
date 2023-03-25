@@ -34,7 +34,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"waitTimeInSeconds": {
-								"value": "@int(variables('seconds'))",
+								"value": "@int(pipeline().parameters.seconds)",
 								"type": "Expression"
 							}
 						}
@@ -43,6 +43,12 @@
 				"policy": {
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
+				},
+				"parameters": {
+					"seconds": {
+						"type": "string",
+						"defaultValue": "10"
+					}
 				},
 				"variables": {
 					"seconds": {
@@ -54,7 +60,7 @@
 					"name": "Annotation"
 				},
 				"annotations": [
-					"@int(variables('seconds'))"
+					"@int(pipeline().parameters.seconds)"
 				]
 			},
 			"dependsOn": []
