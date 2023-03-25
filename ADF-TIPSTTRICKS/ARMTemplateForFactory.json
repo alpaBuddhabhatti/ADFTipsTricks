@@ -28,24 +28,21 @@
 				"description": "Annotation",
 				"activities": [
 					{
-						"name": "Wait1",
+						"name": "Wait for 10 secods",
 						"type": "Wait",
 						"dependsOn": [],
 						"userProperties": [],
 						"typeProperties": {
-							"waitTimeInSeconds": 1
+							"waitTimeInSeconds": {
+								"value": "@int(variables('seconds'))",
+								"type": "Expression"
+							}
 						}
 					}
 				],
 				"policy": {
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
-				},
-				"parameters": {
-					"Seconds": {
-						"type": "string",
-						"defaultValue": "10"
-					}
 				},
 				"variables": {
 					"seconds": {
