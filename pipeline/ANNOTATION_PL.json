@@ -13,6 +13,12 @@
 				}
 			}
 		],
+		"parameters": {
+			"Seconds": {
+				"type": "string",
+				"defaultValue": "10"
+			}
+		},
 		"variables": {
 			"seconds": {
 				"type": "String",
@@ -23,7 +29,7 @@
 			"name": "Annotation"
 		},
 		"annotations": [
-			"@variables('seconds')"
+			"@int(variables('seconds'))"
 		]
 	}
 }
