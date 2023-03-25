@@ -21,6 +21,48 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/ANNOTATION_PL')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "Annotation",
+				"activities": [
+					{
+						"name": "Wait1",
+						"type": "Wait",
+						"dependsOn": [],
+						"userProperties": [],
+						"typeProperties": {
+							"waitTimeInSeconds": 1
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {},
+					"cancelAfter": {}
+				},
+				"parameters": {
+					"Seconds": {
+						"type": "string",
+						"defaultValue": "10"
+					}
+				},
+				"variables": {
+					"seconds": {
+						"type": "String",
+						"defaultValue": "10"
+					}
+				},
+				"folder": {
+					"name": "Annotation"
+				},
+				"annotations": [
+					"@int(variables('seconds'))"
+				]
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/APPEND_VAR_API_BLOB_API')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
@@ -531,42 +573,6 @@
 					"enableServerCertificateValidation": true,
 					"authenticationType": "Anonymous"
 				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ANNOTATION_PL')]",
-			"type": "Microsoft.DataFactory/factories/pipelines",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"description": "Annotation",
-				"activities": [
-					{
-						"name": "Wait1",
-						"type": "Wait",
-						"dependsOn": [],
-						"userProperties": [],
-						"typeProperties": {
-							"waitTimeInSeconds": 1
-						}
-					}
-				],
-				"policy": {
-					"elapsedTimeMetric": {},
-					"cancelAfter": {}
-				},
-				"variables": {
-					"seconds": {
-						"type": "String",
-						"defaultValue": "10"
-					}
-				},
-				"folder": {
-					"name": "Annotation"
-				},
-				"annotations": [
-					"@variables('seconds')"
-				]
 			},
 			"dependsOn": []
 		}
