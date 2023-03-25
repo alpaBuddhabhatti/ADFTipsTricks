@@ -9,7 +9,10 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
-					"waitTimeInSeconds": 1
+					"waitTimeInSeconds": {
+						"value": "@int(variables('seconds'))",
+						"type": "Expression"
+					}
 				}
 			}
 		],
