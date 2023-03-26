@@ -408,9 +408,7 @@
 					"referenceName": "LS_ABLB",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [
-					"FileName - Report_20230324_185400.csv"
-				],
+				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
 					"location": {
