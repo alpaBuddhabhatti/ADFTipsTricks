@@ -10,7 +10,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"waitTimeInSeconds": {
-						"value": "@int(pipeline().parameters.seconds)",
+						"value": "@add(int(pipeline().parameters.seconds),1)",
 						"type": "Expression"
 					}
 				}
