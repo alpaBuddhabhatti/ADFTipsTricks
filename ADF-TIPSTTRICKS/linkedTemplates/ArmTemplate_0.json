@@ -555,7 +555,7 @@
 						"typeProperties": {
 							"variableName": "Data",
 							"value": {
-								"value": "This is Test value of variable",
+								"value": "This is a test value of variable",
 								"type": "Expression"
 							}
 						}
