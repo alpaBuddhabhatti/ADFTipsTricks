@@ -9,7 +9,7 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "total",
+					"variableName": "item",
 					"value": {
 						"value": "'20'",
 						"type": "Expression"
@@ -46,7 +46,7 @@
 						"x-ms-blob-type": "BlockBlob"
 					},
 					"body": {
-						"value": "@variables('items')",
+						"value": "@variables('item')",
 						"type": "Expression"
 					},
 					"authentication": {
@@ -57,7 +57,7 @@
 			}
 		],
 		"variables": {
-			"items": {
+			"item": {
 				"type": "String"
 			}
 		},
