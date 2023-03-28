@@ -23,7 +23,7 @@
 							"typeProperties": {
 								"variableName": "total",
 								"value": {
-									"value": "@1item()",
+									"value": "@item()",
 									"type": "Expression"
 								}
 							}
@@ -72,10 +72,6 @@
 			}
 		],
 		"variables": {
-			"total": {
-				"type": "String",
-				"defaultValue": "800"
-			},
 			"items": {
 				"type": "Array",
 				"defaultValue": [
