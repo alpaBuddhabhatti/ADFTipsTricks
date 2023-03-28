@@ -49,7 +49,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"url": {
-									"value": "@concat('https://azureappdemostore.blob.core.windows.net/input/','data','_',utcnow(),'.csv')",
+									"value": "@concat('https://azureappdemostore.blob.core.windows.net/output/','data','_',utcnow(),'.csv')",
 									"type": "Expression"
 								},
 								"method": "PUT",
