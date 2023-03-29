@@ -29,6 +29,7 @@
 				"activities": [
 					{
 						"name": "Wait for 10 secods",
+						"description": "this is test",
 						"type": "Wait",
 						"dependsOn": [],
 						"userProperties": [],
@@ -47,12 +48,6 @@
 				"parameters": {
 					"seconds": {
 						"type": "string",
-						"defaultValue": "10"
-					}
-				},
-				"variables": {
-					"seconds": {
-						"type": "String",
 						"defaultValue": "10"
 					}
 				},
@@ -149,7 +144,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"url": {
-								"value": "@concat('https://azureappdemostore.blob.core.windows.net/input/','data','_',utcnow(),'.csv')",
+								"value": "@concat('https://azureappdemostore.blob.core.windows.net/output/','data','_',utcnow(),'.csv')",
 								"type": "Expression"
 							},
 							"method": "PUT",
@@ -213,9 +208,9 @@
 									"dependsOn": [],
 									"userProperties": [],
 									"typeProperties": {
-										"variableName": "total",
+										"variableName": "items",
 										"value": {
-											"value": "@1item()",
+											"value": "@item()",
 											"type": "Expression"
 										}
 									}
@@ -241,7 +236,7 @@
 									"userProperties": [],
 									"typeProperties": {
 										"url": {
-											"value": "@concat('https://azureappdemostore.blob.core.windows.net/input/','data','_',utcnow(),'.csv')",
+											"value": "@concat('https://azureappdemostore.blob.core.windows.net/output/','data','_',utcnow(),'.csv')",
 											"type": "Expression"
 										},
 										"method": "PUT",
@@ -268,10 +263,6 @@
 					"cancelAfter": {}
 				},
 				"variables": {
-					"total": {
-						"type": "String",
-						"defaultValue": "800"
-					},
 					"items": {
 						"type": "Array",
 						"defaultValue": [
@@ -288,6 +279,62 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/PIPELINE1')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "Parent Pipeline",
+				"activities": [
+					{
+						"name": "Wait1",
+						"type": "Wait",
+						"dependsOn": [],
+						"userProperties": [],
+						"typeProperties": {
+							"waitTimeInSeconds": 1
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {},
+					"cancelAfter": {}
+				},
+				"folder": {
+					"name": "Splite_Pipelines"
+				},
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/PIPELINE1_Child')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "Parent Pipeline",
+				"activities": [
+					{
+						"name": "Wait1",
+						"type": "Wait",
+						"dependsOn": [],
+						"userProperties": [],
+						"typeProperties": {
+							"waitTimeInSeconds": 1
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {},
+					"cancelAfter": {}
+				},
+				"folder": {
+					"name": "Splite_Pipelines"
+				},
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/VAR_BLOB_API')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
@@ -300,9 +347,9 @@
 						"dependsOn": [],
 						"userProperties": [],
 						"typeProperties": {
-							"variableName": "total",
+							"variableName": "item",
 							"value": {
-								"value": "@1item()",
+								"value": "20",
 								"type": "Expression"
 							}
 						}
@@ -328,7 +375,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"url": {
-								"value": "@concat('https://azureappdemostore.blob.core.windows.net/input/','data','_',utcnow(),'.csv')",
+								"value": "@concat('https://azureappdemostore.blob.core.windows.net/output/','data','_',utcnow(),'.csv')",
 								"type": "Expression"
 							},
 							"method": "PUT",
@@ -337,7 +384,7 @@
 								"x-ms-blob-type": "BlockBlob"
 							},
 							"body": {
-								"value": "@variables('items')",
+								"value": "@variables('item')",
 								"type": "Expression"
 							},
 							"authentication": {
@@ -352,15 +399,8 @@
 					"cancelAfter": {}
 				},
 				"variables": {
-					"total": {
-						"type": "String",
-						"defaultValue": "800"
-					},
-					"items": {
-						"type": "Array",
-						"defaultValue": [
-							"1"
-						]
+					"item": {
+						"type": "String"
 					}
 				},
 				"folder": {
