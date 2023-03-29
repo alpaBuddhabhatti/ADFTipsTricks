@@ -23,12 +23,6 @@
 				"defaultValue": "10"
 			}
 		},
-		"variables": {
-			"seconds": {
-				"type": "String",
-				"defaultValue": "10"
-			}
-		},
 		"folder": {
 			"name": "Annotation"
 		},
