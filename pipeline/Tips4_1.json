@@ -73,6 +73,9 @@
 				"type": "String"
 			}
 		},
+		"folder": {
+			"name": "Output_Messages"
+		},
 		"annotations": [
 			"@pipeline().globalParameters.BlobStoreName"
 		],
