@@ -64,6 +64,9 @@
 				"type": "string"
 			}
 		},
+		"folder": {
+			"name": "Nested_Foreachloop"
+		},
 		"annotations": []
 	}
 }
