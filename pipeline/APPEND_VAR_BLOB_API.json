@@ -21,7 +21,7 @@
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "total",
+								"variableName": "items",
 								"value": {
 									"value": "@item()",
 									"type": "Expression"
