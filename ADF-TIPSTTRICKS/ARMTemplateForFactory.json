@@ -29,7 +29,7 @@
 				"activities": [
 					{
 						"name": "Wait for 10 secods",
-						"description": "this is test",
+						"description": "",
 						"type": "Wait",
 						"dependsOn": [],
 						"userProperties": [],
@@ -286,12 +286,17 @@
 				"description": "Parent Pipeline",
 				"activities": [
 					{
-						"name": "Wait1",
-						"type": "Wait",
+						"name": "Execute Pipeline1",
+						"type": "ExecutePipeline",
 						"dependsOn": [],
 						"userProperties": [],
 						"typeProperties": {
-							"waitTimeInSeconds": 1
+							"pipeline": {
+								"referenceName": "PIPELINE1_Child",
+								"type": "PipelineReference"
+							},
+							"waitOnCompletion": true,
+							"parameters": {}
 						}
 					}
 				],
@@ -304,7 +309,9 @@
 				},
 				"annotations": []
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/PIPELINE1_Child')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/PIPELINE1_Child')]",
