@@ -46,7 +46,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "DS_ABLB_BINARY",
+						"referenceName": "DS_CSV_Tips8",
 						"type": "DatasetReference"
 					},
 					"fieldList": [],
@@ -56,7 +56,7 @@
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
-						"type": "BinaryReadSettings"
+						"type": "DelimitedTextReadSettings"
 					}
 				}
 			}
