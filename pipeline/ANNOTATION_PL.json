@@ -1,0 +1,36 @@
+{
+	"name": "ANNOTATION_PL",
+	"properties": {
+		"description": "Annotation\n@add(int(pipeline().parameters.seconds),1)",
+		"activities": [
+			{
+				"name": "Wait for 10 secods",
+				"description": "",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": {
+						"value": "@add(int(pipeline().parameters.seconds),1)",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"seconds": {
+				"type": "string",
+				"defaultValue": "10"
+			}
+		},
+		"folder": {
+			"name": "Annotation"
+		},
+		"annotations": [
+			"@add(int(pipeline().parameters.seconds),1)",
+			"this is test1"
+		],
+		"lastPublishTime": "2023-07-31T22:20:00Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

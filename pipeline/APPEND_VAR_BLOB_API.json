@@ -1,0 +1,93 @@
+{
+	"name": "APPEND_VAR_BLOB_API",
+	"properties": {
+		"description": "Writing to Blob Storage\n-  Foreach loop can get values from metadata activity or lookup activity \n- Web activity can be outside foreach loop based on your requirement\n\n- In this Example, we just set static values \n",
+		"activities": [
+			{
+				"name": "ForEach",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@variables('items')",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "Set variable",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "items",
+								"value": {
+									"value": "@item()",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "Writing To blob",
+							"type": "WebActivity",
+							"dependsOn": [
+								{
+									"activity": "Set variable",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"url": {
+									"value": "@concat('https://azureappdemostore.blob.core.windows.net/output/','data','_',utcnow(),'.csv')",
+									"type": "Expression"
+								},
+								"method": "PUT",
+								"headers": {
+									"x-ms-version": "2017-11-09",
+									"x-ms-blob-type": "BlockBlob"
+								},
+								"body": {
+									"value": "@variables('items')",
+									"type": "Expression"
+								},
+								"authentication": {
+									"type": "MSI",
+									"resource": "https://storage.azure.com/"
+								}
+							}
+						}
+					]
+				}
+			}
+		],
+		"variables": {
+			"items": {
+				"type": "Array",
+				"defaultValue": [
+					"1"
+				]
+			}
+		},
+		"folder": {
+			"name": "VariableToBlob"
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-07-31T22:20:00Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

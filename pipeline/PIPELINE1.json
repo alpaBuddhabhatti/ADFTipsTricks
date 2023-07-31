@@ -1,0 +1,27 @@
+{
+	"name": "PIPELINE1",
+	"properties": {
+		"description": "Parent Pipeline",
+		"activities": [
+			{
+				"name": "Execute Pipeline1",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PIPELINE1_Child",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"folder": {
+			"name": "Splite_Pipelines"
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-07-31T22:20:01Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
