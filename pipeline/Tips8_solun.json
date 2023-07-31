@@ -15,9 +15,11 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"fieldList": [
-						"childItems"
-					],
+					"dataset": {
+						"referenceName": "DS_ABLB_BINARY",
+						"type": "DatasetReference"
+					},
+					"fieldList": [],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
 						"recursive": true,
@@ -52,10 +54,14 @@
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
+								"pipeline": {
+									"referenceName": "Tips8_solun_child",
+									"type": "PipelineReference"
+								},
 								"waitOnCompletion": true,
 								"parameters": {
 									"filename": {
-										"value": "@item().name",
+										"value": "@item()",
 										"type": "Expression"
 									}
 								}
