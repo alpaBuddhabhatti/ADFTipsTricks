@@ -46,6 +46,10 @@
 				"name": "RunDate",
 				"type": "SetVariable",
 				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "RUNDATE",
@@ -58,7 +62,8 @@
 		],
 		"parameters": {
 			"BOName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "input"
 			}
 		},
 		"variables": {
