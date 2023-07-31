@@ -23,13 +23,7 @@
 							"recursive": true
 						},
 						"formatSettings": {
-							"type": "BinaryReadSettings"
-						}
-					},
-					"sink": {
-						"type": "BinarySink",
-						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings"
+							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"enableStaging": false
@@ -52,6 +46,10 @@
 						]
 					}
 				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "Dataread",
