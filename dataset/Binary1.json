@@ -6,47 +6,13 @@
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "DelimitedText",
+		"type": "Binary",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "MoviesDB.csv",
-				"container": "input"
-			},
-			"columnDelimiter": ",",
-			"escapeChar": "\\",
-			"firstRowAsHeader": true,
-			"quoteChar": "\""
-		},
-		"schema": [
-			{
-				"name": "movie",
-				"type": "String"
-			},
-			{
-				"name": "title",
-				"type": "String"
-			},
-			{
-				"name": "genres",
-				"type": "String"
-			},
-			{
-				"name": "year",
-				"type": "String"
-			},
-			{
-				"name": "Rating",
-				"type": "String"
-			},
-			{
-				"name": "Rotton Tomato",
-				"type": "String"
-			},
-			{
-				"name": "Address_test",
-				"type": "String"
+				"fileName": "test.csv",
+				"container": "bo1"
 			}
-		]
+		}
 	}
 }

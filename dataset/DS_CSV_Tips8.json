@@ -6,13 +6,22 @@
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "Binary",
+		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "test.csv",
 				"container": "bo1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "This is Global Parameter Test",
+				"type": "String"
 			}
-		}
+		]
 	}
 }
