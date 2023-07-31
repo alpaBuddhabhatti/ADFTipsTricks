@@ -89,7 +89,7 @@
 		"parameters": {
 			"ContainerName": {
 				"type": "string",
-				"defaultValue": "bo1"
+				"defaultValue": "input"
 			}
 		},
 		"variables": {
