@@ -1,5 +1,13 @@
 {
 	"name": "ADF-TipsTricks-Demo",
+	"properties": {
+		"globalParameters": {
+			"BlobStoreName": {
+				"type": "string",
+				"value": "https://azureappdemostore.blob.core.windows.net/"
+			}
+		}
+	},
 	"location": "uksouth",
 	"identity": {
 		"type": "SystemAssigned",
