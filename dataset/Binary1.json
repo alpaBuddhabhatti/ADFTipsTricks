@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": "test.csv",
-				"container": "bo1"
+				"container": "input"
 			}
 		}
 	}
