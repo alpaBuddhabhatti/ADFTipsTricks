@@ -23,7 +23,7 @@
 							"recursive": true
 						},
 						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
+							"type": "BinaryReadSettings"
 						}
 					},
 					"sink": {
@@ -36,7 +36,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_ABLB",
+						"referenceName": "Binary1",
 						"type": "DatasetReference"
 					}
 				],
