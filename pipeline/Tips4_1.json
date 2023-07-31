@@ -33,13 +33,7 @@
 						}
 					},
 					"enableStaging": false
-				},
-				"outputs": [
-					{
-						"referenceName": "DS_ABLB_BINARY",
-						"type": "DatasetReference"
-					}
-				]
+				}
 			},
 			{
 				"name": "Set variable1",

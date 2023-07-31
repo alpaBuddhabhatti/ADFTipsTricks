@@ -45,10 +45,6 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataset": {
-						"referenceName": "DS_CSV_Tips8",
-						"type": "DatasetReference"
-					},
 					"fieldList": [
 						"childItems"
 					],

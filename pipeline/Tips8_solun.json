@@ -15,10 +15,6 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataset": {
-						"referenceName": "DS_ABLB_BINARY",
-						"type": "DatasetReference"
-					},
 					"fieldList": [
 						"childItems"
 					],
