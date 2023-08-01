@@ -1,7 +1,7 @@
 {
 	"name": "ANNOTATION_PL",
 	"properties": {
-		"description": "Annotation\n@add(int(pipeline().parameters.seconds),1)",
+		"description": "Annotation\n@add(int(pipeline().parameters.seconds),1trdt",
 		"activities": [
 			{
 				"name": "Wait for 10 secods",
