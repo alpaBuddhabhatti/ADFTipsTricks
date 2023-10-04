@@ -7,6 +7,10 @@
 				"name": "Set variable",
 				"type": "SetVariable",
 				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "item",
@@ -37,7 +41,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"url": {
-						"value": "@concat('https://azureappdemostore.blob.core.windows.net/output/','data','_',utcnow(),'.csv')",
+						"value": "@concat('https://storadfdemo26.blob.core.windows.net/output/','data','_',utcnow(),'.csv')\n",
 						"type": "Expression"
 					},
 					"method": "PUT",
