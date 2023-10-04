@@ -17,7 +17,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "DelimitedText1",
+						"referenceName": "DelimitedText1_copy1",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
