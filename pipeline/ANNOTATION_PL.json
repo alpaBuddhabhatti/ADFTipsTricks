@@ -19,15 +19,15 @@
 		],
 		"parameters": {
 			"seconds": {
-				"type": "string",
-				"defaultValue": "10"
+				"type": "int",
+				"defaultValue": 10
 			}
 		},
 		"folder": {
 			"name": "Annotation"
 		},
 		"annotations": [
-			"@add(int(pipeline().parameters.seconds),1)",
+			"@add(pipeline().parameters.seconds,1)",
 			"this is test1"
 		]
 	}
