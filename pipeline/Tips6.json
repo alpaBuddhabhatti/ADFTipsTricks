@@ -1,7 +1,7 @@
 {
 	"name": "Tips6",
 	"properties": {
-		"description": "PARAMETERS, VARIABLE,GLOBAL_VARIABLE\nUSAGE",
+		"description": "PARAMETERS, VARIABLE,GLOBAL_VARIABLE\nUSAGE\n\nusing webactivity to writing to ABLB - ADF need to have storage Blob Data Contributor access in Storage IAM",
 		"activities": [
 			{
 				"name": "Writing To blob",
