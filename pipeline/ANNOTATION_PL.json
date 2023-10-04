@@ -5,7 +5,7 @@
 		"activities": [
 			{
 				"name": "Wait for 10 secods",
-				"description": "",
+				"description": "This is test",
 				"type": "Wait",
 				"dependsOn": [],
 				"userProperties": [],
