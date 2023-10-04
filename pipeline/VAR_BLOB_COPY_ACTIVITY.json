@@ -78,7 +78,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_ABLB",
+						"referenceName": "DS_ABLB_copy1",
 						"type": "DatasetReference"
 					}
 				],
@@ -93,6 +93,10 @@
 				"name": "Data",
 				"type": "SetVariable",
 				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "Data",
